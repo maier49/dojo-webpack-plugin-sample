@@ -7,7 +7,7 @@
     "dijit": "1.13.0",
     "dojo": "1.13.0",
     "dojo-util": "1.13.0",
-    "dojo-webpack-plugin": "2.7.3",
+    "dojo-webpack-plugin": "file:packages/dojo-webpack-plugin-2.7.3.tgz",
     "dojox": "1.12.2",
     "less": "2.7.1",
     "less-loader": "2.2.3",
