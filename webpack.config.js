@@ -26,7 +26,7 @@ module.exports = {
 		path: path.join(__dirname, "release"),
 		publicPath: "release/",
 		pathinfo: true,
-		filename: "bundle.js"
+		filename: "[name].js"
 	},
 	module: {
 		loaders: [
@@ -56,12 +56,15 @@ module.exports = {
 				data.request = data.request.replace(/^css!/, "!style-loader!css-loader!less-loader!")
 			}
 		),
-
-		new webpack.optimize.UglifyJsPlugin({
-			output: {comments: false},
-			compress: {warnings: false},
-			sourceMap: true
+		new webpack.optimize.CommonsChunkPlugin({
+			name: 'runtime'
 		})
+
+		// new webpack.optimize.UglifyJsPlugin({
+		// 	output: {comments: false},
+		// 	compress: {warnings: false},
+		// 	sourceMap: true
+		// })
 	],
 	resolveLoader: {
 		modules: ["node_modules"]

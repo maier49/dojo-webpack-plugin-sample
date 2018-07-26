@@ -55,7 +55,7 @@ define([
 					    'dojox/charting/Chart2D', 
 					    'dojox/charting/themes/Wetland', 
 					    'dojox/charting/axis2d/Default', 
-					    'dojox/charting/plot2d/Default'
+					    'dojox/charting/plot2d/Default',
 					], lang.hitch(this, function(chart, wetland) {
 						dconst.empty(this.domNode);
 						var node = dconst.place('<div></div>', this.domNode);
